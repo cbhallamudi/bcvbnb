@@ -26,7 +26,8 @@ body{
     /* font-family: 'Bebas Neue', cursive; */
     font-family: sans-serif;
     font-size: max(1.1vmax,16px);
-    background-color: #222222;
+    background-color: var(--custom-white);
+    color: var(--custom-secondary-black);
 }
 
 .container-fluid{
@@ -98,7 +99,7 @@ h1{
     padding: 5px 15px;
 }
 
-.overlay,.landing-header-overlay{
+.overlay{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -108,18 +109,13 @@ h1{
     
 }
 
-.landing-section{
+.common-section{
     min-height: 500px;
     height: 100vh;
     margin: 5px 0;
     overflow: auto;
 }
-.landing-section.faq-section{
-    min-height: 100vh;
-    height: auto;
-    margin: 5px 0;
-    overflow: auto;
-}
+
 
 .input-field, .but {
     min-height: 10px;
@@ -140,29 +136,6 @@ a.but{
     text-decoration: none !important;
     text-align: center !important;
 }
-
-.login-header-subscribe-form, .landing-header-subscribe-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.login-header-subscribe-form{
-    flex-direction: column !important;
-}
-
-.landing-header-subscribe-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.landing-header-subscribe-form .but-lg{
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 0.5em;
-}
-
-
 
 .but-custom-red{
     color: var(--custom-white);
@@ -212,207 +185,54 @@ a.but{
     font-weight: 400 !important;
 }
 
-/* =========== Landing Navbar =========== */
-.main-header-container{
-    min-height: 500px;
-    /* max-height: 500px; */
-    /* height: 100vh; */
-    background-color: #000;
+
+.header {
+  background-color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
 }
 
-.landing-header-img{
-    width: 100%;
-    min-height: 500px;
-    height: 100vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+#navbar {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+/*  background-color: #333;*/
 }
 
-.landing-navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
+#navbar a {
+  color: var(--custom-secondary-black);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-.nfLogo {
-	fill: var(--custom-logo-red);
-	line-height: normal;
-} 
-/*.svg-icon-netflix-logo {
-    height: 3rem;
-    width: 7rem;
-}  
-*/
-.landing-header-overlay{
-    background-color: #0001;
+#navbar > span{
+  float: right;
+    font-size: 30px;
 }
 
-.landing-header-overlay > *{
-    margin: 10px 0;
-}
- 
-.landing-header-title, .landing-header-subtitle,.landing-header-subtitle-2,.landing-header-subscribe-form{
-    width: 75%;
-/*    max-width: 992px;*/
-    text-align: center;
-/*    margin: 5px 0;*/
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-.landing-footer .landing-header-subtitle-2{
-    text-align: left !important;
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
-.landing-section .landing-header-title, .landing-section .landing-header-subtitle,.landing-section .landing-header-subtitle-2,.landing-section .landing-header-subscribe-form{
-    width: 80%;
-    text-align: left !important;
+.content {
+  padding: 16px;
 }
 
-.story-card-animation {
-	height: 100%;
-	left: 50%;
-	max-height: 54%;
-	max-width: 73%;
-	position: absolute;
-	top: 46%;
-	transform: translate(-50%,-50%);
-	width: 100%;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.story-card-animation-download {
-	border: 0;
-	height: auto;
-	max-width: 100%;
+.sticky + .content {
+  padding-top: 60px;
 }
-
-.landing-action-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.landing-action-container > *{
-    margin: 0 0.5em;
-}
-
-.language-selection-container{
-    padding: 10px 5px;
-    background-color: var(--custom-black);
-    color: var(--custom-white);
-    border-radius: 3px;
-}
-
-#landingLanguageSelector {
-    text-transform: capitalize;
-    background-color: transparent;
-    color: var(--custom-white);
-    font-size: max(1vmax,18px);
-}
-
-#landingLanguageSelector option{
-    color: var(--custom-black) !important;
-}
-
-.landing-header-title{
-    font-size: 3rem;
-    margin: 5px 0;
-    font-weight: 900;
-}
-
-.landing-header-subtitle{
-    font-size: 1.5rem;
-    font-weight: normal !important;
-}
-.landing-header-subtitle-2{
-    font-size: 1.2rem;
-    font-weight: 400 !important;
-}
-
-.landing-header-subscribe-form .input-lg{
-    max-width: 500px;
-	/* min-width: 320px; */
-    width: 70%;
-
-}
-
-.landing-header-subscribe-form .but-lg{
-    width: 30%;
-    max-width: 200px;
-}
-
-/*Landing Accordion*/
-
-.accordion-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.accordion-container > .landing-header-title{
-    width: 75%;
-    text-align: center !important;
-    margin: 20px 0;
-}
-
-.landing-accordion{
-    width: 80%;
-    margin: 10px 0;
-    padding: 5px;
-    background-color: var(--custom-secondary-black);
-}
-
-.accordion-handle{
-    cursor: pointer;
-    padding: 15px 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.accordion-content{
-    display: none;
-    padding: 15px 5px;
-    border-top: 1px solid var(--custom-dark-black);
-}
-/*
-#accordionContent1{
-    display: flex;
-}*/
-
-.landing-faq-subscribe-form,.landing-faq-subtitle-2{
-    width: 70%;
-    margin: 15px auto;
-    text-align: center;
-
-}
-
-.landing-faq-subscribe-form .input-field{
-    width: 70%;
-}
-.landing-faq-subscribe-form .but{
-    width: 20%;
-}
-
-/*footer*/
-.landing-footer .container{
-    padding: 50px 10px;
-    min-height: 300px;
-}
-
-.landing-footer .anchor-link{
-    width: 100%;
-
-}
-
-.footer-links-container{
-    list-style-type: none;
-}
-
-.footer-link-item{
-    padding: 10px 0;
-    margin: 5px 0;
-}
-
-.landing-footer .language-selection-container{
-    width: fit-content !important;
-    margin: 20px 0;
-}
-

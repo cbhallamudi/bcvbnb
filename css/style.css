@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carter+One&display=swap');
 
 :root{
+    --custom-pure-white: #ffffff;
+    --custom-pure-black: #000000;
     --custom-white: #efefef;
     --custom-white-opacity: #efefef88;
+    --custom-white-opacity-1: #efefefaa;
     --custom-black: #121212;
     --custom-black-opacity: #121212CC;
+    --custom-black-opacity-1: #12121233;
     --custom-secondary-black: #222222;
     --custom-dark-black: #000000;
     --custom-logo-red: #e50914;
 }
+
+
 
 *{
     margin: 0;
@@ -26,7 +32,7 @@ body{
     /* font-family: 'Bebas Neue', cursive; */
     font-family: sans-serif;
     font-size: max(1.1vmax,16px);
-    background-color: var(--custom-white);
+    background-color: var(--custom-pure-white);
     color: var(--custom-secondary-black);
 }
 
@@ -142,21 +148,37 @@ a.but{
     background-color: var(--custom-logo-red);
 }
 
+.mr-1{
+    margin-right: 0.5em !important;
+}
+
 .bg-custom-black{
     background-color: var(--custom-black);
 }
 .bg-custom-dark-black{
     background-color: var(--custom-dark-black);
 }
-.bg-custom-dark-black-opacity{
-    background-color: var(--custom-black-opacity);
+.custom-black-opacity-1{
+    background-color: var(--custom-black-opacity-1) !important;
 }
+
+.bg-custom-white-opacity{
+    background-color: var(--custom-white-opacity) !important;
+}
+.bg-custom-white-opacity-1{
+    background-color: var(--custom-white-opacity-1) !important;
+}
+
 .border-custom-white-opacity{
     border: 0.1px solid var(--custom-white-opacity);
 }
 
 .text-custom-white{
     color: var(--custom-white) !important;
+}
+
+.text-custom-logo-red{
+    color: var(--custom-logo-red) !important;
 }
 
 .dflex{
@@ -188,27 +210,31 @@ a.but{
 
 .header {
   background-color: #f1f1f1;
-  padding: 15px;
+  padding: 20px 0;
   text-align: center;
 }
+#navbar{
+  border-bottom: 1px solid var(--custom-black-opacity-1);
+}
 
-#navbar {
+.navbar {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 70px;
 /*  background-color: #333;*/
 }
 
 #navbar a {
-  color: var(--custom-secondary-black);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+    color: var(--custom-secondary-black);
+    text-align: center;
+    padding: 14px 5px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-#navbar > span{
+.navbar > span{
   float: right;
     font-size: 30px;
 }
@@ -216,6 +242,7 @@ a.but{
 #navbar a:hover {
   background-color: #ddd;
   color: black;
+  border-radius: 30px;
 }
 
 #navbar a.active {
@@ -235,4 +262,44 @@ a.but{
 
 .sticky + .content {
   padding-top: 60px;
+}
+
+
+/*============= Header ====================*/
+
+.btn-group-oval {
+    padding: 5px;
+    border-radius: 30px !important;
+    border-width: 0.5px;
+    border-color: var(--custom-black-opacity);
+    border-style: solid;
+    box-shadow: 0px 0px 2px 0.5px var(--custom-black);
+}
+
+.filter-btn {
+    padding: 3px 25px;
+    border-right: 1px solid var(--custom-black);
+    background: transparent;
+}
+
+.filter-btn:last-child{
+    border-right: none;
+}
+
+#filterBtn3{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.header-span{
+    transform: translateX(-20%);
+}
+
+.header-link{
+    transform: translateX(-40%);
+}
+
+.menu-group{
+    border: 1px solid var(--custom-black-opacity-1);
+    border-radius: 10px;
 }
